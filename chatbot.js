@@ -135,16 +135,16 @@
                 if (message.message2 && message.message2.toLowerCase() === "lets start") {
                     const buttonContainer = document.createElement("div");
                     buttonContainer.style.display = "flex";
-                    // buttonContainer.style.flexDirection = "column"
+                    buttonContainer.style.flexDirection = "column"
                     buttonContainer.style.gap = "10px";
                     buttonContainer.style.marginTop = "5px";
 
-                    const options = ["About", "Contact", "Service"];
+                    const options = ["About", "Contacts", "Services"];
 
                     options.forEach(option => {
                         const button = document.createElement("button");
                         button.innerText = option;
-                        button.style.padding = "8px 12px";
+                        button.style.padding = "8px 12px"
                         button.style.border = "1px solid #ffbd17";
                         button.style.borderRadius = "10px";
                         button.style.cursor = "pointer";
@@ -153,10 +153,12 @@
                         button.onclick = () => { sendMessage(option, "user"); sendBackend(option, message.number) }
                         buttonContainer.appendChild(button);
                     });
-
-                    userMessage.appendChild(buttonContainer);
+                    messageDiv.appendChild(userMessage);
+                    messageDiv.appendChild(buttonContainer);
+                } else {
+                    messageDiv.appendChild(userMessage);
                 }
-                messageDiv.appendChild(userMessage);
+
                 chatBody.appendChild(messageDiv);
             }
 
