@@ -24,8 +24,8 @@
             justifyContent: "center",
             alignItems: "center",
             position: "fixed",
-            bottom: "20px",
-            right: "100px",
+            bottom: "10px",
+            right: "40px",
         });
         chatBot.appendChild(img);
 
@@ -37,8 +37,8 @@
             formContainer.id = "chatForm";
             Object.assign(formContainer.style, {
                 position: "fixed",
-                bottom: "30px",
-                right: "80px",
+                bottom: "10px",
+                right: "50px",
                 width: "350px",
                 height: "60vh",  // Dynamic height
                 maxHeight: "500px", // Ensures it doesn't get too tall
