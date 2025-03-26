@@ -53,9 +53,12 @@
 
             const form = document.createElement("main");
             form.innerHTML = ` 
-                <div style="display: flex; justify-content: space-between; align-items: center; background-color: #ffbd17; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px; padding: 10px; font-size: 18px; font-weight: bold;">
-                    <p> Chat</p>
-                    <span id="cancelButton" style="cursor:pointer">&times;</span>
+                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbd17; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px;  font-weight: bold; ">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px;">
+                <p> Chat</p>
+                <span id="cancelButton" style="cursor:pointer">&times;</span>
+                </div>   
+                <p style="display: flex; font-size: 16px; padding: 5px;" >Design by Telerivet</p>
                 </div>
 
                 <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
@@ -64,7 +67,7 @@
                            <div style="padding:5px">Welcome to ChatBot Nepal!</div>  
                         </div>
                         <div style="display:flex; margin:5px;">
-                                <button class="chat-option" data-response="Lets Start" style="border: 2px solid #ffbd17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:5px; color:white">Lets Start</button>
+                                <button class="chat-option" data-response="Lets Start" style="border: 1px solid #ffbd17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #ffbd17">Lets Start</button>
                             </div>
                     </div>
                      
@@ -142,11 +145,11 @@
                         const button = document.createElement("button");
                         button.innerText = option;
                         button.style.padding = "8px 12px";
-                        button.style.border = "2px solid #ffbd17";
-                        button.style.borderRadius = "5px";
+                        button.style.border = "1px solid #ffbd17";
+                        button.style.borderRadius = "10px";
                         button.style.cursor = "pointer";
                         button.style.backgroundColor = "transparent";
-                        button.style.color = "white";
+                        button.style.color = "#ffbd17";
                         button.onclick = () => { sendMessage(option, "user"); sendBackend(option, message.number) }
                         buttonContainer.appendChild(button);
                     });
