@@ -58,7 +58,7 @@
                 <p> Chat</p>
                 <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
                 </div>   
-                <p style="display: flex; font-size: 16px; padding: 5px;" >Design by Telerivet</p>
+                <p style="display: flex; font-size: 14px; padding: 5px;" >Design by Telerivet</p>
                 </div>
 
                 <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
