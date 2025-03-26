@@ -11,15 +11,15 @@
         }
 
         const img = document.createElement('img');
-        img.src = "https://t3.ftcdn.net/jpg/02/31/46/10/360_F_231461036_iqWztZMUlDMcBn86HEJbct8hWtjAjeDI.jpg";
+        img.src = "/photos/chatbot.png";
         img.style.width = "150px";
         img.style.height = "150px";
 
         Object.assign(chatBot.style, {
-            backgroundColor: '#ffffff',
+            backgroundColor: 'transparent',
             border: 'none',
             cursor: 'pointer',
-            borderRadius: "50%",
+            // borderRadius: "50%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
