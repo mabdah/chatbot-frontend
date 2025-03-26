@@ -64,7 +64,7 @@
                 <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
                     <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
                         <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px;">
-                           <div style="padding:5px">Welcome to ChatBot Nepal!</div>  
+                           <div style="padding:5px">Welcome, Click the button to start conversation!</div>  
                         </div>
                         <div style="display:flex; margin:5px;">
                                 <button class="chat-option" data-response="Lets Start" style="border: 1px solid #ffbd17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #ffbd17">Lets Start</button>
