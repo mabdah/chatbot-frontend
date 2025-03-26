@@ -64,7 +64,7 @@
                            <div style="padding:5px">Welcome to ChatBot Nepal!</div>  
                         </div>
                         <div style="display:flex; margin:5px;">
-                                <button class="chat-option" data-response="Lets Start" style="border: none; background-color: #007bff; padding:8px 12px; cursor:pointer; border-radius:5px; color:white">Lets Start</button>
+                                <button class="chat-option" data-response="Lets Start" style="border: 2px solid #ffbd17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:5px; color:white">Lets Start</button>
                             </div>
                     </div>
                      
@@ -142,10 +142,10 @@
                         const button = document.createElement("button");
                         button.innerText = option;
                         button.style.padding = "8px 12px";
-                        button.style.border = "none";
+                        button.style.border = "2px solid #ffbd17";
                         button.style.borderRadius = "5px";
                         button.style.cursor = "pointer";
-                        button.style.backgroundColor = "#007bff";
+                        button.style.backgroundColor = "transparent";
                         button.style.color = "white";
                         button.onclick = () => { sendMessage(option, "user"); sendBackend(option, message.number) }
                         buttonContainer.appendChild(button);
