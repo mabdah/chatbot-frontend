@@ -11,7 +11,7 @@
         }
 
         const img = document.createElement('img');
-        img.src = "/photos/chatbot.png";
+        img.src = "https://example-chatapp.vercel.app/photos/chatbot.png";
         img.style.width = "150px";
         img.style.height = "150px";
 
