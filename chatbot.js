@@ -40,7 +40,7 @@
                 bottom: "10px",
                 right: "50px",
                 width: "350px",
-                height: "70vh",  // Dynamic height
+                height: "65vh",  // Dynamic height
                 maxHeight: "500px", // Ensures it doesn't get too tall
                 minHeight: "400px", // Ensures usability on small screens
                 backgroundColor: "#fff",
