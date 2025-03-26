@@ -53,7 +53,7 @@
 
             const form = document.createElement("main");
             form.innerHTML = ` 
-                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbd17; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px; ">
+                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #135fbc; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px; ">
                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px; font-weight: bold; ">
                 <p> Chat</p>
                 <span id="cancelButton" style="cursor:pointer">&times;</span>
@@ -67,7 +67,7 @@
                            <div style="padding:5px">Welcome, Click the button to start conversation!</div>  
                         </div>
                         <div style="display:flex; margin:5px;">
-                                <button class="chat-option" data-response="Lets Start" style="border: 1px solid #ffbd17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #ffbd17">Lets Start</button>
+                                <button class="chat-option" data-response="Lets Start" style="border: 1px solid #135fbc; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #135fbc">Lets Start</button>
                             </div>
                     </div>
                      
@@ -76,7 +76,7 @@
                     <input id="input" type="text" placeholder="Say something..." autocomplete="off" 
                         style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;"/>
                     <button id="sendButton" 
-                        style="padding: 8px 12px; background-color: #ffbd17; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+                        style="padding: 8px 12px; background-color: #135fbc; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
                 </div>
 
                
@@ -125,7 +125,7 @@
                 messageDiv.style.flexDirection = "column";
                 messageDiv.style.alignItems = sender === "bot" ? "flex-start" : "flex-end";
                 const userMessage = document.createElement("div");
-                userMessage.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#ffbd17";
+                userMessage.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#135fbc";
                 userMessage.style.padding = "10px";
                 userMessage.style.margin = "5px 0px 5px 0px";
                 userMessage.style.borderRadius = "10px";
@@ -145,11 +145,11 @@
                         const button = document.createElement("button");
                         button.innerText = option;
                         button.style.padding = "8px 12px"
-                        button.style.border = "1px solid #ffbd17";
+                        button.style.border = "1px solid #135fbc";
                         button.style.borderRadius = "10px";
                         button.style.cursor = "pointer";
                         button.style.backgroundColor = "transparent";
-                        button.style.color = "#ffbd17";
+                        button.style.color = "#135fbc";
                         button.onclick = () => { sendMessage(option, "user"); sendBackend(option, message.number) }
                         buttonContainer.appendChild(button);
                     });
