@@ -12,8 +12,8 @@
 
         const img = document.createElement('img');
         img.src = "https://example-chatapp.vercel.app/photos/chatbot.png";
-        img.style.width = "150px";
-        img.style.height = "150px";
+        img.style.width = "200px";
+        img.style.height = "auto";
 
         Object.assign(chatBot.style, {
             backgroundColor: 'transparent',
