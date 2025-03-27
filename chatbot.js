@@ -40,8 +40,8 @@
                 bottom: "10px",
                 right: "50px",
                 width: "350px",
-                maxHeight: "500px", // Ensures it doesn't get too tall
-                minHeight: "400px", // Ensures usability on small screens
+                // maxHeight: "500px", // Ensures it doesn't get too tall
+                // minHeight: "400px", // Ensures usability on small screens
                 backgroundColor: "#fff",
                 // borderRadius: "10px",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
@@ -62,12 +62,12 @@
 
                 <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
                     <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
-                        <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px;">
-                           <div style="padding:5px">Welcome, Click the button to start conversation!</div>  
+                        <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
+                           <div style="padding:5px">Welcome to ChatBot Nepal!</div>  
                         </div>
                         <div style="display:flex; margin:5px;">
                                 <button class="chat-option" data-response="Lets Start" style="border: 1px solid #135fbc; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #135fbc">Lets Start</button>
-                            </div>
+                        </div>
                     </div>
                      
                 </div>
@@ -127,7 +127,7 @@
                 userMessage.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#135fbc";
                 userMessage.style.padding = "10px";
                 userMessage.style.margin = "5px 0px 5px 0px";
-                userMessage.style.borderRadius = "10px";
+                userMessage.style.borderRadius = sender === "bot" ? "10px 10px 10px 0px" : "10px 10px 0px 10px";
                 userMessage.style.color = sender === "bot" ? "black" : "white";
                 userMessage.innerText = sender === "bot" ? message.message1 : message;
 
