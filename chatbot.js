@@ -52,7 +52,7 @@
 
             const form = document.createElement("main");
             form.innerHTML = ` 
-                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #135fbc; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px; ">
+                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #135fbc; color: white; ">
                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px; font-weight: bold; ">
                 <p> Chat</p>
                 <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
