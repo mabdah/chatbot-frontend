@@ -40,13 +40,12 @@
                 bottom: "10px",
                 right: "50px",
                 width: "350px",
-                height: "65vh",  // Dynamic height
                 maxHeight: "500px", // Ensures it doesn't get too tall
                 minHeight: "400px", // Ensures usability on small screens
                 backgroundColor: "#fff",
                 borderRadius: "10px",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-                padding: "10px",
+                // padding: "10px",
                 display: "flex",
                 flexDirection: "column",
             });
