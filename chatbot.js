@@ -24,8 +24,8 @@
             justifyContent: "center",
             alignItems: "center",
             position: "fixed",
-            bottom: "10px",
-            right: "40px",
+            bottom: "0px",
+            right: "10px",
         });
         chatBot.appendChild(img);
 
