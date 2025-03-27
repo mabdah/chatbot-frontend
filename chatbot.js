@@ -43,7 +43,7 @@
                 maxHeight: "500px", // Ensures it doesn't get too tall
                 minHeight: "400px", // Ensures usability on small screens
                 backgroundColor: "#fff",
-                borderRadius: "10px",
+                // borderRadius: "10px",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 // padding: "10px",
                 display: "flex",
@@ -55,7 +55,7 @@
                 <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #135fbc; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px; ">
                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px; font-weight: bold; ">
                 <p> Chat</p>
-                <span id="cancelButton" style="cursor:pointer; font-size:35px">&times;</span>
+                <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
                 </div>   
                 <p style="display: flex; font-size: 14px; padding: 5px;" >Design by Telerivet</p>
                 </div>
