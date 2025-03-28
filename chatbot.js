@@ -59,7 +59,7 @@
             </div>   
             </div>
 
-            <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
+            <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 400px; max-height: 500px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
                 <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
                     <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
                        <div style="padding:5px">Welcome, Please Click the button to start the conversation!</div>  
