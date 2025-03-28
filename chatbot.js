@@ -131,7 +131,7 @@
                 userMessage.style.color = sender === "bot" ? "black" : "white";
                 userMessage.innerText = sender === "bot" ? message.botMessage : message;
 
-                if (message.message2 && message.userMessage.toLowerCase() === "lets start") {
+                if (message.userMessage && message.userMessage.toLowerCase() === "lets start") {
                     const buttonContainer = document.createElement("div");
                     buttonContainer.style.display = "flex";
                     buttonContainer.style.flexDirection = "column"
