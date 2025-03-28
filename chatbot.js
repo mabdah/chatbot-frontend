@@ -129,9 +129,9 @@
                 userMessage.style.margin = "5px 0px 5px 0px";
                 userMessage.style.borderRadius = sender === "bot" ? "10px 10px 10px 0px" : "10px 10px 0px 10px";
                 userMessage.style.color = sender === "bot" ? "black" : "white";
-                userMessage.innerText = sender === "bot" ? message.message1 : message;
+                userMessage.innerText = sender === "bot" ? message.botMessage : message;
 
-                if (message.message2 && message.message2.toLowerCase() === "lets start") {
+                if (message.userMessage && message.userMessage.toLowerCase() === "lets start") {
                     const buttonContainer = document.createElement("div");
                     buttonContainer.style.display = "flex";
                     buttonContainer.style.flexDirection = "column"
@@ -181,7 +181,7 @@
                                 const data2 = await response2.json()
                                 console.log(data2, "this is data2")
                                 if (data2) {
-                                    sendMessage({ message1: data2.value, message2: data.value.message, number: data.value.uniqueTestNumber }, "bot")
+                                    sendMessage({ botMessage: data2.value, message, userMessage: data.value.message, number: data.value.bot_web_id }, "bot")
                                 }
 
                             }
