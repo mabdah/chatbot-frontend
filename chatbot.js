@@ -11,22 +11,22 @@
         }
 
         const img = document.createElement('img');
-        img.src = "https://example-chatapp.vercel.app/photos/chatbot.png";
+        img.src = "https://example-chatapp.vercel.app/photos/Chat.png";
         img.style.width = "200px";
         img.style.height = "auto";
+        img.style.borderRadius = "50%",
 
-        Object.assign(chatBot.style, {
-            backgroundColor: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-            // borderRadius: "50%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "fixed",
-            bottom: "0px",
-            right: "10px",
-        });
+            Object.assign(chatBot.style, {
+                backgroundColor: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "fixed",
+                bottom: "0px",
+                right: "10px",
+            });
         chatBot.appendChild(img);
 
         chatBot.onclick = function () {
@@ -43,7 +43,7 @@
                 // maxHeight: "500px", // Ensures it doesn't get too tall
                 // minHeight: "400px", // Ensures usability on small screens
                 backgroundColor: "#fff",
-                // borderRadius: "10px",
+                borderRadius: "10px",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 // padding: "10px",
                 display: "flex",
@@ -52,34 +52,34 @@
 
             const form = document.createElement("main");
             form.innerHTML = ` 
-                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #135fbc; color: white; border-radius: 2px  ">
-                <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px; font-weight: bold; ">
-                <p> Chat</p>
-                <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
-                </div>   
-                <p style="display: flex; font-size: 14px; padding: 5px;" >Design by Telerivet</p>
-                </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbc17; color: white; border-radius: 2px ">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px; font-weight: bold; ">
+            <p> Chat</p>
+            <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
+            </div>   
+            <p style="display: flex; font-size: 12px; padding: 5px;" >Design by Telerivet</p>
+            </div>
 
-                <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
-                    <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
-                        <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
-                           <div style="padding:5px">Welcome, Please Click the button to start the conversation!</div>  
-                        </div>
-                        <div style="display:flex; margin:5px;">
-                                <button class="chat-option" data-response="Lets Start" style="border: 1px solid #135fbc; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #135fbc">Lets Start</button>
-                        </div>
+            <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
+                <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
+                    <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
+                       <div style="padding:5px">Welcome, Please Click the button to start the conversation!</div>  
                     </div>
-                     
+                    <div style="display:flex; margin:5px;">
+                            <button class="chat-option" data-response="Lets Start" style="border: 1px solid #ffbc17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #ffbc17">Lets Start</button>
+                    </div>
                 </div>
-                <div style="display: flex; background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px;">
-                    <input id="input" type="text" placeholder="Say something..." autocomplete="off" 
-                        style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;"/>
-                    <button id="sendButton" 
-                        style="padding: 8px 12px; background-color: #135fbc; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-                </div>
+                 
+            </div>
+            <div style="display: flex; background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px;">
+                <input id="input" type="text" placeholder="Say something..." autocomplete="off" 
+                    style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;"/>
+                <button id="sendButton" 
+                    style="padding: 8px 12px; background-color: #ffbc17; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+            </div>
 
-               
-            `;
+           
+        `;
 
             formContainer.appendChild(form);
             document.body.appendChild(formContainer);
@@ -124,14 +124,14 @@
                 messageDiv.style.flexDirection = "column";
                 messageDiv.style.alignItems = sender === "bot" ? "flex-start" : "flex-end";
                 const userMessage = document.createElement("div");
-                userMessage.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#135fbc";
+                userMessage.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#ffbc17";
                 userMessage.style.padding = "10px";
                 userMessage.style.margin = "5px 0px 5px 0px";
                 userMessage.style.borderRadius = sender === "bot" ? "10px 10px 10px 0px" : "10px 10px 0px 10px";
                 userMessage.style.color = sender === "bot" ? "black" : "white";
-                userMessage.innerText = sender === "bot" ? message.botMessage : message;
+                userMessage.innerText = sender === "bot" ? message.message1 : message;
 
-                if (message.userMessage && message.userMessage.toLowerCase() === "lets start") {
+                if (message.message2 && message.message2.toLowerCase() === "lets start") {
                     const buttonContainer = document.createElement("div");
                     buttonContainer.style.display = "flex";
                     buttonContainer.style.flexDirection = "column"
@@ -144,11 +144,11 @@
                         const button = document.createElement("button");
                         button.innerText = option;
                         button.style.padding = "8px 12px"
-                        button.style.border = "1px solid #135fbc";
+                        button.style.border = "1px solid #ffbc17";
                         button.style.borderRadius = "10px";
                         button.style.cursor = "pointer";
                         button.style.backgroundColor = "transparent";
-                        button.style.color = "#135fbc";
+                        button.style.color = "#ffbc17";
                         button.onclick = () => { sendMessage(option, "user"); sendBackend(option, message.number) }
                         buttonContainer.appendChild(button);
                     });
@@ -178,10 +178,10 @@
                                     method: "GET",
                                     headers: { "Content-type": "application/json" },
                                 })
-                                const viewData = await response2.json()
-                                console.log(viewData, "this is viewData")
-                                if (viewData) {
-                                    sendMessage({ botMessage: viewData.value.message, userMessage: data.value.message, number: viewData.value.bot_web_id }, "bot")
+                                const data2 = await response2.json()
+                                console.log(data2, "this is data2")
+                                if (data2) {
+                                    sendMessage({ message1: data2.value, message2: data.value.message, number: data.value.uniqueTestNumber }, "bot")
                                 }
 
                             }
