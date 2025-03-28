@@ -53,11 +53,10 @@
             const form = document.createElement("main");
             form.innerHTML = ` 
             <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbc17; color: white; border-radius: 2px ">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;  font-size: 18px; font-weight: bold; ">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding:0px 5px 0px 5px;  font-size: 18px; font-weight: bold; ">
             <p> Chat</p>
             <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
             </div>   
-            <p style="display: flex; font-size: 12px; padding: 5px;" >Design by Telerivet</p>
             </div>
 
             <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 250px; max-height: 350px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
