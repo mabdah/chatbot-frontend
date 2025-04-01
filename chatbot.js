@@ -32,10 +32,11 @@
         chatBot.onclick = function () {
             let formContainer = document.getElementById("chatForm")
             if (formContainer) {
-                chatBody.style.display = "none"
                 formContainer.style.display = "flex"
+                chatBot.style.display = "none"
                 return
             }
+
             formContainer = document.createElement("div");
             formContainer.id = "chatForm";
             Object.assign(formContainer.style, {
