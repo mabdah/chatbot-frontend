@@ -35,57 +35,59 @@
                 formContainer.style.display = "flex"
                 chatBot.style.display = "none"
                 return
-            }
-            chatBot.style.display = "none"
-            formContainer = document.createElement("div");
-            formContainer.id = "chatForm";
-            Object.assign(formContainer.style, {
-                position: "fixed",
-                bottom: "10px",
-                right: "50px",
-                width: "380px",
-                // maxHeight: "500px", // Ensures it doesn't get too tall
-                // minHeight: "400px", // Ensures usability on small screens
-                backgroundColor: "#fff",
-                borderRadius: "10px",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-                // padding: "10px",
-                display: "flex",
-                flexDirection: "column",
-            });
+            } else {
+                chatBot.style.display = "none"
+                formContainer = document.createElement("div");
+                formContainer.id = "chatForm";
+                Object.assign(formContainer.style, {
+                    position: "fixed",
+                    bottom: "10px",
+                    right: "50px",
+                    width: "380px",
+                    // maxHeight: "500px", // Ensures it doesn't get too tall
+                    // minHeight: "400px", // Ensures usability on small screens
+                    backgroundColor: "#fff",
+                    borderRadius: "10px",
+                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+                    // padding: "10px",
+                    display: "flex",
+                    flexDirection: "column",
+                });
 
-            const form = document.createElement("main");
-            form.innerHTML = ` 
-            <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbc17; color: white; border-radius: 2px ">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding:5px 15px 5px 15px;  font-size: 18px; font-weight: bold; ">
-            <p> Chat</p>
-            <span id="cancelButton" style="cursor:pointer; font-size:35px">&times;</span>
-            </div>   
-            </div>
-
-            <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 350px; max-height: 400px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
-                <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
-                    <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
-                       <div style="padding:5px">Welcome, Please Click the button to start the conversation!</div>  
-                    </div>
-                    <div style="display:flex; margin:5px;">
-                            <button class="chat-option" data-response="Lets Start" style="border: 1px solid #ffbc17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #ffbc17">Lets Start</button>
-                    </div>
+                const form = document.createElement("main");
+                form.innerHTML = ` 
+                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbc17; color: white; border-radius: 2px ">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding:5px 15px 5px 15px;  font-size: 18px; font-weight: bold; ">
+                <p> Chat</p>
+                <span id="cancelButton" style="cursor:pointer; font-size:35px">&times;</span>
+                </div>   
                 </div>
-                 
-            </div>
-            <div style="display: flex; background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px;">
-                <input id="input" type="text" placeholder="Say something..." autocomplete="off" 
-                    style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;"/>
-                <button id="sendButton" 
-                    style="padding: 8px 12px; background-color: #ffbc17; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-            </div>
+    
+                <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 350px; max-height: 400px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
+                    <div class="bot-message" style="display: flex; flex-direction: column; align-items:flex-start">
+                        <div style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
+                           <div style="padding:5px">Welcome, Please Click the button to start the conversation!</div>  
+                        </div>
+                        <div style="display:flex; margin:5px;">
+                                <button class="chat-option" data-response="Lets Start" style="border: 1px solid #ffbc17; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #ffbc17">Lets Start</button>
+                        </div>
+                    </div>
+                     
+                </div>
+                <div style="display: flex; background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px;">
+                    <input id="input" type="text" placeholder="Say something..." autocomplete="off" 
+                        style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;"/>
+                    <button id="sendButton" 
+                        style="padding: 8px 12px; background-color: #ffbc17; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+                </div>
+    
+               
+            `;
 
-           
-        `;
+                formContainer.appendChild(form);
+                document.body.appendChild(formContainer);
+            }
 
-            formContainer.appendChild(form);
-            document.body.appendChild(formContainer);
 
             const inputField = document.getElementById("input");
             // const sendButton = document.getElementById("sendButton");
