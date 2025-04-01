@@ -128,9 +128,9 @@
                 userMessage.style.margin = "5px 0px 5px 0px";
                 userMessage.style.borderRadius = sender === "bot" ? "10px 10px 10px 0px" : "10px 10px 0px 10px";
                 userMessage.style.color = sender === "bot" ? "black" : "white";
-                userMessage.innerText = sender === "bot" ? message.botMessage : message;
+                userMessage.innerText = sender === "bot" ? message.botMessage.message : message;
 
-                if (message.userMessage && message.userMessage.toLowerCase() === "lets start") {
+                if (message.userMessage.message && message.userMessage.message.toLowerCase() === "lets start") {
                     const buttonContainer = document.createElement("div");
                     buttonContainer.style.display = "flex";
                     buttonContainer.style.flexDirection = "column"
