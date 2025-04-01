@@ -199,7 +199,7 @@
             //close button functionality
             cancelButton.addEventListener("click", function () {
                 chatBot.style.display = "flex";
-                formContainer.remove();
+                formContainer.style.display = "none";
             });
         };
     });
