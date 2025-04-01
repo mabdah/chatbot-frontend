@@ -33,10 +33,9 @@
             let formContainer = document.getElementById("chatForm")
             if (formContainer) {
                 formContainer.style.display = "flex"
-                chatBot.style.display = "none"
                 return
             }
-
+            chatBot.style.display = "none"
             formContainer = document.createElement("div");
             formContainer.id = "chatForm";
             Object.assign(formContainer.style, {
