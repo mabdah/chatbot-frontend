@@ -34,9 +34,6 @@
             if (formContainer) {
                 formContainer.style.display = "flex"
 
-            } else {
-                chatBody.style.display = "none"
-                return
             }
             formContainer = document.createElement("div");
             formContainer.id = "chatForm";
