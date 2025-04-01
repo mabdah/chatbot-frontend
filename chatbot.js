@@ -180,7 +180,7 @@
                                 const data2 = await response2.json()
                                 console.log(data2, "this is data2")
                                 if (data2) {
-                                    sendMessage({ botMessage: data2.value, message, userMessage: data.value.message, number: data.value.bot_web_id }, "bot")
+                                    sendMessage({ botMessage: data2.value, userMessage: data.value.message, number: data2.value.bot_web_id }, "bot")
                                 }
 
                             }
