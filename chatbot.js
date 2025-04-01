@@ -30,10 +30,13 @@
         chatBot.appendChild(img);
 
         chatBot.onclick = function () {
-            if (document.getElementById("chatForm")) return;
-            chatBot.style.display = "none";
-
-            const formContainer = document.createElement("div");
+            let formContainer = document.getElementById("chatForm")
+            if (formContainer) {
+                formContainer.style.display = "flex"
+                chatBody.style.display = "none"
+                return
+            }
+            formContainer = document.createElement("div");
             formContainer.id = "chatForm";
             Object.assign(formContainer.style, {
                 position: "fixed",
