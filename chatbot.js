@@ -34,7 +34,6 @@
             if (formContainer) {
                 formContainer.style.display = "flex"
                 chatBot.style.display = "none"
-                return
             } else {
                 chatBot.style.display = "none"
                 formContainer = document.createElement("div");
