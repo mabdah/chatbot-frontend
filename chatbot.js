@@ -14,25 +14,27 @@
         img.src = "https://example-chatapp.vercel.app/photos/Chat.png";
         img.style.width = "200px";
         img.style.height = "auto";
-        img.style.borderRadius = "50%",
+        img.style.borderRadius = "50%";
 
-            Object.assign(chatBot.style, {
-                backgroundColor: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                position: "fixed",
-                bottom: "0px",
-                right: "10px",
-            });
+        Object.assign(chatBot.style, {
+            backgroundColor: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "fixed",
+            bottom: "0px",
+            right: "10px",
+        });
         chatBot.appendChild(img);
 
         chatBot.onclick = function () {
             let formContainer = document.getElementById("chatForm")
             if (formContainer) {
                 formContainer.style.display = "flex"
+
+            } else {
                 chatBody.style.display = "none"
                 return
             }
