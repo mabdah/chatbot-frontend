@@ -33,6 +33,7 @@
             let formContainer = document.getElementById("chatForm")
             if (formContainer) {
                 formContainer.style.display = "flex"
+                chatBody.style.display = "none"
 
             }
             formContainer = document.createElement("div");
