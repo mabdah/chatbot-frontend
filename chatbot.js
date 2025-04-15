@@ -34,27 +34,28 @@
             if (formContainer) {
                 formContainer.style.display = "flex"
                 chatBot.style.display = "none"
-            } else {
-                chatBot.style.display = "none"
-                formContainer = document.createElement("div");
-                formContainer.id = "chatForm";
-                Object.assign(formContainer.style, {
-                    position: "fixed",
-                    bottom: "10px",
-                    right: "50px",
-                    width: "380px",
-                    // maxHeight: "500px", // Ensures it doesn't get too tall
-                    // minHeight: "400px", // Ensures usability on small screens
-                    backgroundColor: "#fff",
-                    borderRadius: "10px",
-                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-                    // padding: "10px",
-                    display: "flex",
-                    flexDirection: "column",
-                });
+                return
+            }
+            chatBot.style.display = "none"
+            formContainer = document.createElement("div");
+            formContainer.id = "chatForm";
+            Object.assign(formContainer.style, {
+                position: "fixed",
+                bottom: "10px",
+                right: "50px",
+                width: "380px",
+                // maxHeight: "500px", // Ensures it doesn't get too tall
+                // minHeight: "400px", // Ensures usability on small screens
+                backgroundColor: "#fff",
+                borderRadius: "10px",
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+                // padding: "10px",
+                display: "flex",
+                flexDirection: "column",
+            });
 
-                const form = document.createElement("main");
-                form.innerHTML = ` 
+            const form = document.createElement("main");
+            form.innerHTML = ` 
                 <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ffbc17; color: white; border-radius: 2px ">
                 <div style="display: flex; justify-content: space-between; align-items: center; padding:5px 15px 5px 15px;  font-size: 18px; font-weight: bold; ">
                 <p> Chat</p>
@@ -83,9 +84,9 @@
                
             `;
 
-                formContainer.appendChild(form);
-                document.body.appendChild(formContainer);
-            }
+            formContainer.appendChild(form);
+            document.body.appendChild(formContainer);
+
 
 
             const inputField = document.getElementById("input");
