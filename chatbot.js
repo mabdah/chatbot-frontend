@@ -89,7 +89,7 @@
                         </div> 
                     </div>
                 </div>
-                <div id="sendDiv" style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px; display: none">
+                <div id="sendDiv" style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px; display: none; justify-content:center; align-items:center">
                     <div id="home" style="cursor: pointer; margin-right: 10px;">
                         <img src="https://example-chatapp.vercel.app/photos/home.png" style="width: 25px; height: 25px;" />
                     </div>
