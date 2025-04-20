@@ -121,6 +121,9 @@
             };
 
             homeButton.onclick = () => {
+                const clearElement = chatBody.querySelectorAll(".user-message, .bot-message")
+                clearElement.forEach(e => e.remove())
+                chatBody.scrollTop = 0;
                 sendBackend("Main menu", botNumber);
             };
 
