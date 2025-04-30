@@ -92,11 +92,12 @@
                     <div id="home" style="cursor: pointer; margin-right: 10px;">
                         <img src="https://example-chatapp.vercel.app/photos/home.png" style="width: 25px; height: 25px;" />
                     </div>
-                    <input id="input" type="text" placeholder="Say something..." autocomplete="off" 
-                        style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;" />
+                    <input id="input" type="text" autocomplete="off" placeholder ="Ask Here ......" value =""
+                        style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;" value=""/>
                     <button id="sendButton"
                         style="padding: 8px 12px; background-color: #8E44AD; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
                 </div>
+               
             `;
             document.body.appendChild(formContainer);
 
@@ -112,7 +113,14 @@
             const homeButton = document.getElementById("home");
 
             sendButton.onclick = () => sendUserMessage();
-            inputField.onkeydown = (e) => e.key === "Enter" && sendUserMessage();
+            // inputField.onkeydown = (e) => e.key === "Enter" && sendUserMessage();
+
+            inputField.addEventListener('change', (e) => {
+                sendUserMessage()
+                console.log("Input value:", inputField.value);
+            });
+
+
 
             cancelButton.onclick = () => {
                 chatBot.style.display = "flex";
