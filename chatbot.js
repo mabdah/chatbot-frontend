@@ -3,7 +3,6 @@
         const CHATBOT_ID = "chatBotButton";
         const CHAT_FORM_ID = "chatForm";
         const API_BASE = "https://chatbotweb-api.vercel.app";
-
         let botNumber = null;
 
         // Add bounce animation style
@@ -89,7 +88,7 @@
                         </div> 
                     </div>
                 </div>
-                <div id="sendDiv" style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px; display: none; justify-content:center; align-items:center">
+                <div id="sendDiv" style="background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 10px; display: none">
                     <div id="home" style="cursor: pointer; margin-right: 10px;">
                         <img src="https://example-chatapp.vercel.app/photos/home.png" style="width: 25px; height: 25px;" />
                     </div>
@@ -125,6 +124,7 @@
                 clearElement.forEach(e => e.remove())
                 chatBody.scrollTop = 0;
                 sendBackend("Main menu", botNumber);
+
             };
 
             chatBody.addEventListener("click", function (e) {
@@ -204,6 +204,7 @@
                 messageBubble.style.color = sender === "bot" ? "black" : "white";
                 messageBubble.style.padding = "10px";
                 messageBubble.style.borderRadius = "10px";
+                messageBubble.style.minWidth = "100%";
 
                 if (sender === "bot") {
                     const [msgOnly, ...buttonParts] = message.botMessage.split(/(?=<button)/);
@@ -232,12 +233,12 @@
                 chatBody.scrollTop = chatBody.scrollHeight;
             }
 
-            function convertTextToButtons(text) {
-                const buttonPattern = /#\$(.*?)\$#/g;
-                return text.replace(buttonPattern, (match, content) => {
-                    return `<button class="chat-option" data-response="${content}" style="border: 1px solid #8E44AD; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #8E44AD; margin: 5px 5px 0 0; width:100%">${content}</button>`;
-                });
-            }
+            // function convertTextToButtons(text) {
+            //     const buttonPattern = /#\$(.*?)\$#/g;
+            //     return text.replace(buttonPattern, (match, content) => {
+            //         return `<button class="chat-option" data-response="${content}" style="border: 1px solid #8E44AD; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #8E44AD; margin: 5px 5px 0 0; width:100%">${content}</button>`;
+            //     });
+            // }
 
             async function sendBackend(message, number) {
                 try {
@@ -263,7 +264,7 @@
                                 if (data2) {
                                     botNumber = data2.value.bot_web_id;
                                     let botMsg = data2.value.message;
-
+                                    console.log(data2.value, "this is message from telerivet")
                                     if (data2.value.media) {
                                         const mediaURL = data2.value.media;
                                         const mediaHtml = `<a href="${mediaURL}" target="_blank"><img src="${mediaURL}" alt="Image" style="max-width: 100%; border-radius: 10px;"></a>`;
@@ -271,12 +272,16 @@
                                     }
 
                                     if (data2.value.url) {
-                                        const buttonHtml = `<a href="${data2.value.url}" target="_blank" style="text-decoration: none;">${data2.value.url}</a>`;
-                                        botMsg = botMsg.replace(data2.value.url, buttonHtml);
+                                        const linkHtml = `<a href="${data2.value.url}" target="_blank" style="text-decoration: none;">${data2.value.url}</a>`;
+                                        botMsg = botMsg.replace(data2.value.url, linkHtml);
                                     }
-
-                                    const parsedMessage = convertTextToButtons(botMsg);
-                                    appendMessage({ botMessage: parsedMessage }, "bot");
+                                    if (data2.value.quick_replies) {
+                                        const buttonHtml = data2.value.quick_replies.map((button_text) => {
+                                            return `<button class="chat-option" data-response="${button_text.text}" style="border: 1px solid #8E44AD; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #8E44AD; margin: 5px 5px 0 0; width:100%">${button_text.text}</button>`;
+                                        }).join("");
+                                        botMsg += `<div style="margin-top:10px;">${buttonHtml}</div>`;
+                                    }
+                                    appendMessage({ botMessage: botMsg }, "bot");
                                 }
                             } catch (error) {
                                 removeTypingIndicator();
