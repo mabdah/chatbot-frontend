@@ -133,6 +133,8 @@
                     appendMessage(message, "user");
                     sendBackend(message, botNumber);
                     sendDiv.style.display = "flex";
+                    sendDiv.style.justifyContent = "center";
+                    sendDiv.style.alignItems = "center";
 
                     const startConv = document.getElementById("start_conv");
                     if (startConv) startConv.style.display = "none";
