@@ -69,7 +69,7 @@
             formContainer.innerHTML = `
                 <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #344b4a; color: white; border-radius: 2px">
                     <div style="display: flex; justify-content: space-between; align-items: center; padding:10px 12px 0px 12px; font-size: 18px; font-weight: bold;">
-                        <p style="font-size: 15px;">Oodni Boutique</p>
+                        <p style="font-size: 25px;">Oodni Boutique</p>
                         <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
                     </div>  
                     <p style="font-size: 12px; padding: 2px 15px 10px 35px">By Khusbhu Dangol</p> 
