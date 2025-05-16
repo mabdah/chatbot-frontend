@@ -23,7 +23,7 @@
             button.id = CHATBOT_ID;
 
             const img = document.createElement('img');
-            img.src = "https://example-chatapp.vercel.app/photos/chatbot_royal.png";
+            img.src = "https://example-chatapp.vercel.app/photos/chatbot_purple.png";
             img.style.width = "200px";
             img.style.borderRadius = "50%";
 
