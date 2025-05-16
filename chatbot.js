@@ -68,11 +68,11 @@
 
             formContainer.innerHTML = `
                 <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #344b4a; color: white; border-radius: 2px">
-                    <div style="display: flex; justify-content: space-between; align-items: center; padding:5px 12px; font-size: 18px; font-weight: bold;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding:10px 12px 0px 12px; font-size: 18px; font-weight: bold;">
                         <p style="font-size: 15px;">Oodni Boutique</p>
                         <span id="cancelButton" style="cursor:pointer; font-size:25px">&times;</span>
                     </div>  
-                    <p style="font-size: 12px; padding: 2px 15px 10px 15px ">By Khusbhu Dangol</p> 
+                    <p style="font-size: 12px; padding: 2px 15px 10px 35px">By Khusbhu Dangol</p> 
                 </div>
                 <a href="" target="_blank" style="text-decoration: none"><p style="text-align: right; padding:5px; color: #3ba8e0; font-size: 12px"></p></a>
                 <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 350px; max-height: 400px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
