@@ -67,12 +67,12 @@
             });
 
             formContainer.innerHTML = `
-                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #012a33; color: white; border-radius: 2px">
+                <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #344b4a; color: white; border-radius: 2px">
                     <div style="display: flex; justify-content: space-between; align-items: center; padding:5px 12px; font-size: 18px; font-weight: bold;">
-                        <p style="font-size: 25px;">Torus Digital</p>
-                        <span id="cancelButton" style="cursor:pointer; font-size:35px">&times;</span>
+                        <p style="font-size: 25px;">Oodni Boutique</p>
+                        <span id="cancelButton" style="cursor:pointer; font-size:15px">&times;</span>
                     </div>  
-                    <p style="font-size: 12px; padding: 2px 15px 0px 15px ">Your AI Assistant</p> 
+                    <p style="font-size: 12px; padding: 2px 15px 0px 15px ">By Khusbhu Dangol</p> 
                 </div>
                 <a href="" target="_blank" style="text-decoration: none"><p style="text-align: right; padding:5px; color: #3ba8e0; font-size: 12px"></p></a>
                 <div id="chatBody" style="flex-grow: 1; width: auto; height: 40vh; min-height: 350px; max-height: 400px; display: flex; flex-direction: column; overflow-y:auto; padding: 10px;">
@@ -84,7 +84,7 @@
                             <div class="message-container" style="background-color: #f1f1f1; padding: 10px; border-radius: 10px 10px 10px 0px;">
                                 <div style="padding: 5px;">Welcome, Please Click the button to start the conversation!</div>
                             </div>
-                            <button class="chat-option" data-response="Lets Start" style="border: 1px solid #012a33; background-color: transparent; padding: 8px 12px; cursor: pointer; border-radius: 10px; color: #012a33; width: 100%;">Let's Start</button>
+                            <button class="chat-option" data-response="Lets Start" style="border: 1px solid #344b4a; background-color: transparent; padding: 8px 12px; cursor: pointer; border-radius: 10px; color: #344b4a; width: 100%;">Let's Start</button>
                         </div> 
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                     <input id="input" type="text" autocomplete="off" placeholder ="Ask Here ......" value =""
                         style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; outline: none; margin-right: 10px;" value=""/>
                     <button id="sendButton"
-                        style="padding: 8px 12px; background-color: #012a33; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+                        style="padding: 8px 12px; background-color: #344b4a; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
                 </div>
                
             `;
@@ -159,9 +159,9 @@
 
                 typingDiv.innerHTML = `
                     <div style="display:flex; gap: 4px;">
-                        <span style="width:8px; height:8px; background:#012a33; border-radius:50%; animation: bounce 1.2s infinite ease-in-out;"></span>
-                        <span style="width:8px; height:8px; background:#012a33; border-radius:50%; animation: bounce 1.2s infinite ease-in-out; animation-delay: .2s;"></span>
-                        <span style="width:8px; height:8px; background:#012a33; border-radius:50%; animation: bounce 1.2s infinite ease-in-out; animation-delay: .4s;"></span>
+                        <span style="width:8px; height:8px; background:#344b4a; border-radius:50%; animation: bounce 1.2s infinite ease-in-out;"></span>
+                        <span style="width:8px; height:8px; background:#344b4a; border-radius:50%; animation: bounce 1.2s infinite ease-in-out; animation-delay: .2s;"></span>
+                        <span style="width:8px; height:8px; background:#344b4a; border-radius:50%; animation: bounce 1.2s infinite ease-in-out; animation-delay: .4s;"></span>
                     </div>
                 `;
                 chatBody.appendChild(typingDiv);
@@ -210,7 +210,7 @@
                 messageWrapper.style.maxWidth = "80%";
 
                 const messageBubble = document.createElement("div");
-                messageBubble.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#012a33";
+                messageBubble.style.backgroundColor = sender === "bot" ? "#f1f1f1" : "#344b4a";
                 messageBubble.style.color = sender === "bot" ? "black" : "white";
                 messageBubble.style.padding = "10px";
                 messageBubble.style.borderRadius = "10px";
@@ -246,7 +246,7 @@
             // function convertTextToButtons(text) {
             //     const buttonPattern = /#\$(.*?)\$#/g;
             //     return text.replace(buttonPattern, (match, content) => {
-            //         return `<button class="chat-option" data-response="${content}" style="border: 1px solid #012a33; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #012a33; margin: 5px 5px 0 0; width:100%">${content}</button>`;
+            //         return `<button class="chat-option" data-response="${content}" style="border: 1px solid #344b4a; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #344b4a; margin: 5px 5px 0 0; width:100%">${content}</button>`;
             //     });
             // }
 
@@ -287,7 +287,7 @@
                                     }
                                     if (data2.value.quick_replies) {
                                         const buttonHtml = data2.value.quick_replies.map((button_text) => {
-                                            return `<button class="chat-option" data-response="${button_text.text}" style="border: 1px solid #012a33; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #012a33; margin: 5px 5px 0 0; width:100%">${button_text.text}</button>`;
+                                            return `<button class="chat-option" data-response="${button_text.text}" style="border: 1px solid #344b4a; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: #344b4a; margin: 5px 5px 0 0; width:100%">${button_text.text}</button>`;
                                         }).join("");
                                         botMsg += `<div style="margin-top:10px;">${buttonHtml}</div>`;
                                     }
