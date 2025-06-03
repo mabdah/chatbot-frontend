@@ -60,13 +60,13 @@
         
         }   
         #chatBotButton {
-            animation: fadeInScale 0.5s ease-out;
+            animation: fadeInScale 1s ease-out forwards;
         }
         #chatForm {
-            animation: slideInUp 1s ease-out;
+            animation: slideInUp 2s ease-out forwards;
         }
         .animate-slideInleft {
-           animation: slideInleft 0.7s ease-out forwards;
+           animation: slideInleft 2s ease-out forwards;
         }
        `;
         document.head.appendChild(style);
@@ -330,7 +330,7 @@
                             time.style.transition = "opacity 0.6s ease, transform 0.6s ease";
                         }
 
-                        if (orgNameEl) {
+                        if (logoImg && orgNameEl) {
                             orgNameEl.style.opacity = "0";
                             orgNameEl.style.transform = "translateX(-20px)";
                             orgNameEl.style.transition = "opacity 0.6s ease, transform 0.6s ease";
