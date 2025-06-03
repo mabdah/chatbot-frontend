@@ -127,7 +127,7 @@
             formContainer.innerHTML = `
                 <div style="display: flex; flex-direction: column; justify-content: space-between; background-color: ${theme_color}; color: white; border-radius: 15px 15px 2px 2px">
                     <div style="display: flex; justify-content: space-between; align-items: center; padding:10px 12px; ">
-                       <div style="display: flex; justify-content: left; align-items: center"> 
+                       <div style="display: flex; justify-content: left; align-items: center; gap:5px"> 
                         <img id="org-url" alt="Logo" style="width: 20%; height: auto; opacity: 0; transform: translateX(-20px);transition: opacity 0.6s ease, transform 0.2s ease;">
                            <div style="display: flex; flex-direction: column; gap:5px">
                            <p class="org-name" style="font-size: 25px; font-weight: 600;"></p>
