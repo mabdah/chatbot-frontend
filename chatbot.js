@@ -202,7 +202,6 @@
                 }
             }
 
-            // Append to DOM
             document.body.appendChild(formContainer);
             // updateStartConvTime();
             initChatEvents();
@@ -240,14 +239,21 @@
 
             initWebSocket();
 
-            sendButton.onclick = () => sendUserMessage();
-            // inputField.onkeydown = (e) => e.key === "Enter" && sendUserMessage();
+            sendButton.onclick = () => {
+                const message = inputField.value.trim();
+                if (message) {
+                    appendMessage(message, "user");
+                    sendBackend(message, botNumber);
+                    inputField.value = "";
+                }
+            };
 
-            inputField.addEventListener('change', (e) => {
-                sendUserMessage()
-                console.log("Input value:", inputField.value);
+            inputField.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendButton.click();
+                }
             });
-
 
 
             cancelButton.onclick = () => {
@@ -286,7 +292,7 @@
 
                 socket.onopen = () => {
                     console.log("WebSocket connected");
-                    reconnectAttempts = 0; // reset on successful connection
+                    // reconnectAttempts = 0; // reset on successful connection
                     socket.send(JSON.stringify({ textMessage: "Start", number: "", telerivetUrl: telerivetUrl }));
                 };
 
@@ -306,10 +312,6 @@
                         intial_message = data.intial_message;
                         buttonText = data.button
 
-
-                        // if (data.org_name && data.logo_url && data.theme_color) {
-                        //     showChatForm(data);
-                        // }
                         const logoImg = document.querySelector("#chatForm img[alt='Logo']");
                         const orgNameEl = document.querySelector("#chatForm p.org-name");
                         const initialMessageText = document.querySelector(".message-container #initial_message");
@@ -506,7 +508,6 @@
                 messageDiv.style.marginBottom = "30px";
                 messageDiv.style.width = sender === "bot" ? "95%" : "100%";
                 messageDiv.style.justifyContent = sender === "bot" ? "flex-start" : "flex-end";
-                // avatar.innerHTML = `<img src="${sender === 'bot' ? 'https://example-chatapp.vercel.app/photos/robot.png' : 'https://example-chatapp.vercel.app/photos/people.png'}" alt="${sender === 'bot' ? 'Bot' : 'User'} Avatar" style="width: ${sender === 'bot' ? '25px' : '20px'}; height: ${sender === 'bot' ? '25px' : '20px'}; border-radius: 50%;">`;
 
                 const messageWrapper = document.createElement("div");
                 messageWrapper.style.display = "flex";
@@ -540,7 +541,6 @@
                     const avatar = document.createElement("div");
                     avatar.className = "avatar";
                     avatar.style.margin = sender === "bot" ? "10px 10px 0 0" : "";
-                    // avatar.style.border = sender === "bot" ? "1px solid #3ba8e0" : "";
                     avatar.style.borderRadius = "50%";
                     avatar.style.width = sender === "bot" ? "35px" : "30px";
                     avatar.style.height = sender === "bot" ? "35px" : "30px";
