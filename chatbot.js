@@ -170,7 +170,7 @@
                 <div style ="display:flex; justify-content:center; align-items:center; padding:5px ;gap:5px">
                 <p style="text-align: center; color: #aab0b8; font-size: 12px">Powered by Telerivet</p>
                 <span style="border: 1px solid #e0dede; height:10px"></span>
-                 <a href="https://www.telerivet.com/" target="_blank" style="text-decoration: none ; width: 15px; height: 15px;">  <img src="/photos/browser.png" style="width: 15px; height: 15px;" /></a>
+                 <a href="https://www.telerivet.com/" target="_blank" style="text-decoration: none ; width: 15px; height: 15px;">  <img src="https://example-chatapp.vercel.app/photos/browser.png" style="width: 15px; height: 15px;" /></a>
                  </div>
                  
                
@@ -447,6 +447,7 @@
                         }
 
                         if (botMsg.quick_replies) {
+                            console.log(botMsg.quick_replies, "replies")
                             const buttonHtml = botMsg.quick_replies.map(button => {
                                 return `<button class="chat-option" data-response="${button.text}" style="border: 1px solid ${theme_color}; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: ${theme_color}; margin: 5px 5px 0 0; width:100%">${button.text}</button>`;
                             }).join("");
