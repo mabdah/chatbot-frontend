@@ -446,7 +446,7 @@
                             messageContent += `<div style="margin-top:10px;">${linkHtml}</div>`;
                         }
 
-                        if (botMsg.quick_replies) {
+                        if (botMsg.quick_replies?.some(q => Object.keys(q).length)) {
                             console.log(botMsg.quick_replies, "replies")
                             const buttonHtml = botMsg.quick_replies.map(button => {
                                 return `<button class="chat-option" data-response="${button.text}" style="border: 1px solid ${theme_color}; background-color: transparent; padding:8px 12px; cursor:pointer; border-radius:10px; color: ${theme_color}; margin: 5px 5px 0 0; width:100%">${button.text}</button>`;
@@ -482,7 +482,6 @@
 
             function sendBackend(message, number) {
                 if (socket && socket.readyState === WebSocket.OPEN) {
-                    console.log(message)
                     showTypingIndicator();
                     const payload = JSON.stringify({
                         textMessage: message,
