@@ -11,10 +11,13 @@
 
         // Get telerivet_url from script tag
         let telerivetUrl = null;
+        let chatbotimage = null
         const scripts = document.querySelectorAll('script[src*="chatbot.js"]');
         scripts.forEach(script => {
             const url = script.getAttribute('telerivet_url');
+            const chatimage = script.getAttribute('image');
             if (url) telerivetUrl = url;
+            if (image) chatbotimage = chatimage
         });
 
         // Add bounce animation style
@@ -80,7 +83,7 @@
             button.id = CHATBOT_ID;
 
             const img = document.createElement('img');
-            img.src = "https://example-chatapp.vercel.app/photos/chatbot_purple.png";
+            img.src = `${chatbotimage}`;
             img.style.width = "200px";
             img.style.borderRadius = "50%";
 
