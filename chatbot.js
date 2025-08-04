@@ -17,7 +17,7 @@
             const url = script.getAttribute('telerivet_url');
             const chatimage = script.getAttribute('image');
             if (url) telerivetUrl = url;
-            if (image) chatbotimage = chatimage
+            if (chatimage) chatbotimage = chatimage
         });
 
         // Add bounce animation style
